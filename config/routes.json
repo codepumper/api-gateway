@@ -1,0 +1,27 @@
+{
+  "routes": {
+    "/login": {
+      "service": "auth",
+      "method": "Login",
+      "grpc_service": "AuthService",
+      "request_map": {
+        "email": "email",
+        "password": "password"
+      }
+    },
+    "/register": {
+      "service": "auth",
+      "method": "Register",
+      "grpc_service": "AuthService",
+      "request_map": {
+        "email": "email",
+        "password": "password"
+      }
+    }
+  },
+  "services": {
+    "auth": {
+      "address": "localhost:50051"
+    }
+  }
+}
